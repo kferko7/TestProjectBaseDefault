@@ -22,9 +22,10 @@ public class LoginPage {
         PageFactory.initElements(driver, this
         );
     }
+
     public void username(String username) {
         interactions.sendKeys(elements.username,
-                By.id(USERNAME_ID),
+                By.cssSelector(USERNAME_CSS),
                 username);
     }
     public void password(String password) {

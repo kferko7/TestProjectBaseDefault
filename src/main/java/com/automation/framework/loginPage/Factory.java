@@ -7,8 +7,13 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Factory extends LoginPage {
 
-    public static final String USERNAME_ID = "username";
-    @FindBy(id = USERNAME_ID)
+    public static final String SIGNUP_CSS = "a[href='/login']";
+    @FindBy(css = SIGNUP_CSS)
+    public WebElement signUp;
+
+
+    public static final String USERNAME_CSS = "input[data-qa='login-email']";
+    @FindBy(css = USERNAME_CSS)
     public WebElement username;
 
     public static final String PASSWORD_ID = "password";
