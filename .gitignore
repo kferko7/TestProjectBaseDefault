@@ -7,5 +7,3 @@ target
 *.zip
 globalproperties.properties
 
-.gitgnore/src/main/java/com/automation/framework/tools/Tc_EncryptedPassword.java
-/testng/
