@@ -22,6 +22,8 @@ public class LoginPage {
         PageFactory.initElements(driver, this
         );
     }
+    public void signUp(){interactions.actionClick(By.cssSelector(SIGNUP_CSS));
+    }
 
     public void username(String username) {
         interactions.sendKeys(elements.username,
@@ -30,20 +32,17 @@ public class LoginPage {
     }
     public void password(String password) {
         interactions.sendKeys(elements.password,
-                By.id(PASSWORD_ID),
+                By.name(PASSWORD_NAME),
                 password);
     }
     public void login() {
         interactions.click(elements.login,
                 By.cssSelector(LOGIN_CSS));
     }
-    public void drpUiImage() {
+
+    public void userLogout() {
         interactions.actionClick(
-                By.xpath(DRP_UI_IMAGE_XPATH));
-    }
-    public void devUserLogout() {
-        interactions.actionClick(
-                By.cssSelector(DEV_USER_LOGOUT_CSS));
+                By.cssSelector(USER_LOGOUT_CSS));
     }
 
 }

@@ -25,6 +25,7 @@ import java.util.concurrent.TimeUnit;
 public class Base {
 
     public String systemUnderTest;
+    public String signUp;
     public String username;
     public String password;
     public SoftAssert softAssert;
@@ -62,12 +63,13 @@ public class Base {
             driver.manage().window().maximize();
         }
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.get("https://");
+        driver.get("https://www.automationexercise.com/");
         loginPage = new LoginPage(driver);
-        loginPage.username("k.ferko@shoecarnival.loyaltydev");
+        loginPage.signUp();
+        loginPage.username("kim.ferko@gmail.com");
 
         //loginPage.password(username);
-        driver.findElement(By.id("password")).sendKeys(decodedString());
+        driver.findElement(By.name("password")).sendKeys(decodedString());
         homePage = new HomePage(driver);
         loginPage.login();
         softAssert = new SoftAssert();
@@ -75,7 +77,7 @@ public class Base {
 
     }
     static String decodedString() {
-        byte[] decodedString = Base64.decodeBase64("S2YyNTA1ODAhYmVzdA==");
+        byte[] decodedString = Base64.decodeBase64("a2ZlcmtvIzEhc2VrJA==");
         return (new String(decodedString));
 
 

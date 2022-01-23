@@ -12,11 +12,13 @@ public class TC_withEncryptedPassword {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver(chromeOptions);
 
-        driver.get("https:");
+        driver.get("https://www.automationexercise.com/");
 
-        driver.findElement(By.id("username")).sendKeys("username123a");
-        driver.findElement(By.id("password")).sendKeys(decodedString(""));
-        driver.findElement(By.cssSelector("#Login")).click();
+
+
+        driver.findElement(By.cssSelector("a[href='/login']")).sendKeys("ferko");
+        driver.findElement(By.cssSelector("kferko#1!sek$")).sendKeys(decodedString(""));
+        driver.findElement(By.cssSelector("a[href='/logout']")).click();
 
     }
 

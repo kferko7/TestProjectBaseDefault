@@ -16,21 +16,17 @@ public class Factory extends LoginPage {
     @FindBy(css = USERNAME_CSS)
     public WebElement username;
 
-    public static final String PASSWORD_ID = "password";
-    @FindBy(id = PASSWORD_ID)
+    public static final String PASSWORD_NAME = "password";
+    @FindBy(name = PASSWORD_NAME)
     public WebElement password;
 
-    public static final String LOGIN_CSS = "#Login";
+    public static final String LOGIN_CSS = "button[data-qa='login-button']";
     @FindBy(css = LOGIN_CSS)
     public WebElement login;
 
-    public static final String DRP_UI_IMAGE_XPATH = "//button/div/span/div/span";
-    @FindBy(xpath = DRP_UI_IMAGE_XPATH)
-    public WebElement drpUiImage;
-
-    public static final String DEV_USER_LOGOUT_CSS = ".logout";
-    @FindBy(css = DEV_USER_LOGOUT_CSS)
-    public WebElement devUserLogout;
+    public static final String USER_LOGOUT_CSS = "a[href='/logout']";
+    @FindBy(css = USER_LOGOUT_CSS)
+    public WebElement userLogout;
 
     public Factory(WebDriver driver) {
         PageFactory.initElements(driver, this);

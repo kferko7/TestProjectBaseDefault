@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
     @Test
     public void tc01_LoginTest(){
-            loginPage.login();
+            loginPage.userLogout();
 
     }
 
