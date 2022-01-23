@@ -1,5 +1,4 @@
 /src/main/java/com/automation/framework/tools/EncodingAndDecodingStrings.java
-/src/main/java/com/automation/framework/tools/Tc_EncryptedPassword.java
  **/.DS_Store
 **.log
 .idea
@@ -7,4 +6,6 @@ target
 *.iml
 *.zip
 globalproperties.properties
-.gitignore
+
+.gitgnore/src/main/java/com/automation/framework/tools/Tc_EncryptedPassword.java
+/testng/
