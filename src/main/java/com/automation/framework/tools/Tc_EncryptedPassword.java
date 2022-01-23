@@ -1,11 +1,13 @@
 package com.automation.framework.tools;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.codec.binary.Base64;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-public class TC_withEncryptedPassword {
+
+public class Tc_EncryptedPassword {
 
     public static void main(String[] args) {
         ChromeOptions chromeOptions = new ChromeOptions();
@@ -29,3 +31,4 @@ public class TC_withEncryptedPassword {
     }
 
 }
+
